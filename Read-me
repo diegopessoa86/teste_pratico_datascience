@@ -1,0 +1,135 @@
+# Desafio_P_D_ML
+Intelivix
+Resolução do Desafio
+1. Imports necessários
+2. Carregando os dois arquivos em dois dataframes
+3. Retirando Colunas que não contribuem para o modelo
+4. Verificando se há valores nulos nos dados
+5. Plotagem de um grafico para ver a distribuição da coluna target = 'Sentimento'
+6. Utilizando bag of words para transformar em numero as setenças.
+   Para o uso dos modelos de Machine Learning com texto essa etapa é imprescindivel
+7. Criando o modelo Naive Bayes
+   O modelo Naive Bayes é o mais indicado para esse tipo de Modelo
+8. Depois do Modelo Criado e Treinado devemos testar e avaliar os resultados.
+9. Resultados do NB
+     0      1     2     3      4
+0[[  187  1133   679    74     3]
+1 [  121  3363  4310   448    12]
+2 [   43  1714 19701  2395    66]
+3 [    4   287  4134  5124   212]
+4 [    0    30   534  1855   389]]
+              precision    recall  f1-score   support
+
+           0       0.53      0.09      0.15      2076
+           1       0.52      0.41      0.46      8254
+           2       0.67      0.82      0.74     23919
+           3       0.52      0.52      0.52      9761
+           4       0.57      0.14      0.22      2808
+
+   micro avg       0.61      0.61      0.61     46818
+   macro avg       0.56      0.40      0.42     46818
+weighted avg       0.60      0.61      0.59     46818
+
+Accuracy = 0.6143790849673203 = 61,4%
+
+10. Criando o Modelo Regressão Logistica, treinando e testando.
+11. Resultados da Regressão Logistica
+[[ 1258   592    92    41    93]
+ [ 2135  3663  1492   435   529]
+ [ 1991  3553 13269  3229  1877]
+ [  579   612  1625  4227  2718]
+ [   84    37    83   787  1817]]
+              precision    recall  f1-score   support
+
+           0       0.21      0.61      0.31      2076
+           1       0.43      0.44      0.44      8254
+           2       0.80      0.55      0.66     23919
+           3       0.48      0.43      0.46      9761
+           4       0.26      0.65      0.37      2808
+
+   micro avg       0.52      0.52      0.52     46818
+   macro avg       0.44      0.54      0.45     46818
+weighted avg       0.61      0.52      0.54     46818
+
+Accuracy = 0.5176214276560297.
+
+12.Criando o Modelo MLP - Redes Neurais Multi-camada (25,19,19)
+13. Resultados
+[[  282  1230   507    56     1]
+ [  390  4573  2906   365    20]
+ [  219  4711 15880  3003   106]
+ [   44   961  3526  4800   430]
+ [    6   118   466  1853   365]]
+              precision    recall  f1-score   support
+
+           0       0.30      0.14      0.19      2076
+           1       0.39      0.55      0.46      8254
+           2       0.68      0.66      0.67     23919
+           3       0.48      0.49      0.48      9761
+           4       0.40      0.13      0.20      2808
+
+   micro avg       0.55      0.55      0.55     46818
+   macro avg       0.45      0.40      0.40     46818
+weighted avg       0.55      0.55      0.55     46818
+
+14. Criando uma Floresta Randomica n=100
+15. Resultados
+
+[[  383   564  1026   101     2]
+ [  330  2096  5394   414    20]
+ [   72  1441 20428  1879    99]
+ [   12   221  5945  3062   521]
+ [    1    47  1176  1013   571]]
+              precision    recall  f1-score   support
+
+           0       0.48      0.18      0.27      2076
+           1       0.48      0.25      0.33      8254
+           2       0.60      0.85      0.71     23919
+           3       0.47      0.31      0.38      9761
+           4       0.47      0.20      0.28      2808
+
+   micro avg       0.57      0.57      0.57     46818
+   macro avg       0.50      0.36      0.39     46818
+weighted avg       0.54      0.57      0.53     46818
+
+Accuracy = 0.566875987867914
+16. Por fim Criei dois Modelos de KNN, um com parametro peso = 'Distancia' e outro com o parametro peso = 'Uniforme'
+17. Resultados com weight = 'distance'
+[[  274   423  1350    26     3]
+ [  178  1328  6605   131    12]
+ [   32   531 22459   859    38]
+ [    2    53  6931  2521   254]
+ [    0    15  1449   907   437]]
+              precision    recall  f1-score   support
+
+           0       0.56      0.13      0.21      2076
+           1       0.57      0.16      0.25      8254
+           2       0.58      0.94      0.72     23919
+           3       0.57      0.26      0.35      9761
+           4       0.59      0.16      0.25      2808
+
+   micro avg       0.58      0.58      0.58     46818
+   macro avg       0.57      0.33      0.36     46818
+weighted avg       0.57      0.58      0.51     46818
+
+accuracy = 0.5771070955615362
+
+18. Resultados com weight = 'uniform'
+[[  469   651   923    31     2]
+ [  361  2337  5393   156     7]
+ [  120  1089 21677   977    56]
+ [    9   145  6540  2766   301]
+ [    2    30  1284  1015   477]]
+              precision    recall  f1-score   support
+
+           0       0.49      0.23      0.31      2076
+           1       0.55      0.28      0.37      8254
+           2       0.61      0.91      0.73     23919
+           3       0.56      0.28      0.38      9761
+           4       0.57      0.17      0.26      2808
+
+   micro avg       0.59      0.59      0.59     46818
+   macro avg       0.55      0.37      0.41     46818
+weighted avg       0.58      0.59      0.54     46818
+
+Accuracy = 0.5922081250800973
